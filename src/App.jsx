@@ -1,11 +1,11 @@
 
 import './App.css'
-import Hero from './Components/Hero/Hero'
+import Chart from './Components/Chart/Chart'
 function App() {
 
   return (
     <>
-      <Hero/>
+      <Chart/>
     </>  
   )
 }
