@@ -54,12 +54,29 @@ const Chart = () => {
       const chartOptions = {
         layout: {
           textColor: "white",
-          background: { type: "solid", color: "#191927" },
+          background: { type: "solid", color: "#1e1f2c" },
         },
         timeScale: {
           timeVisible: true, // Show hours and minutes
           secondsVisible: false, // Optionally enable seconds
         },
+        priceScale: {
+          normal: true
+        },
+        grid: {
+          vertLines: {
+            color: '#22242c', // Subtle vertical grid line color
+            style: 1, // Solid line
+            visible: true,
+            width: 3,
+          },
+          horzLines: {
+            color: '#22242c', // Subtle horizontal grid line color
+            style: 1, // Solid line
+            visible: true,
+            width: 3,
+          },
+        }
       };
   
 
