@@ -51,33 +51,34 @@ const Chart = () => {
 
     if (chartData.candlestickData.length === 0) return;
 
-      const chartOptions = {
-        layout: {
-          textColor: "white",
-          background: { type: "solid", color: "#1e1f2c" },
+    const chartOptions = {
+      layout: {
+        textColor: "#d4d4d4", // Light text color
+        background: { type: "solid", color: "#1e1e1e" }, // Dark background color
+      },
+      timeScale: {
+        timeVisible: true, // Show hours and minutes
+        secondsVisible: false, // Optionally enable seconds
+      },
+      priceScale: {
+        normal: true,
+      },
+      grid: {
+        vertLines: {
+          color: "#3c3c3c", // Subtle vertical grid line color
+          style: 1, // Solid line
+          visible: true,
+          width: 1,
         },
-        timeScale: {
-          timeVisible: true, // Show hours and minutes
-          secondsVisible: false, // Optionally enable seconds
+        horzLines: {
+          color: "#3c3c3c", // Subtle horizontal grid line color
+          style: 1, // Solid line
+          visible: true,
+          width: 1,
         },
-        priceScale: {
-          normal: true
-        },
-        grid: {
-          vertLines: {
-            color: '#22242c', // Subtle vertical grid line color
-            style: 1, // Solid line
-            visible: true,
-            width: 3,
-          },
-          horzLines: {
-            color: '#22242c', // Subtle horizontal grid line color
-            style: 1, // Solid line
-            visible: true,
-            width: 3,
-          },
-        }
-      };
+      },
+    };
+    
   
 
     const chart = createChart(chartContainerRef.current, chartOptions);
@@ -103,7 +104,7 @@ const Chart = () => {
     };
   }, [chartData]);
 
-  return <div ref={chartContainerRef} style={{ height: "500px", width: "100%" }}></div>;
+  return <div ref={chartContainerRef} style={{ height: "900px", width: "100%" }}></div>;
 };
 
 export default Chart;
